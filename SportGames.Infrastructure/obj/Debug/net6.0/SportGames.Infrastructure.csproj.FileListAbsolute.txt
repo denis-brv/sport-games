@@ -1,0 +1,12 @@
+C:\work\projects\SportGames\SportGames.Infrastructure\bin\Debug\net6.0\SportGames.Infrastructure.deps.json
+C:\work\projects\SportGames\SportGames.Infrastructure\bin\Debug\net6.0\SportGames.Infrastructure.dll
+C:\work\projects\SportGames\SportGames.Infrastructure\bin\Debug\net6.0\SportGames.Infrastructure.pdb
+C:\work\projects\SportGames\SportGames.Infrastructure\obj\Debug\net6.0\SportGames.Infrastructure.csproj.AssemblyReference.cache
+C:\work\projects\SportGames\SportGames.Infrastructure\obj\Debug\net6.0\SportGames.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\work\projects\SportGames\SportGames.Infrastructure\obj\Debug\net6.0\SportGames.Infrastructure.AssemblyInfoInputs.cache
+C:\work\projects\SportGames\SportGames.Infrastructure\obj\Debug\net6.0\SportGames.Infrastructure.AssemblyInfo.cs
+C:\work\projects\SportGames\SportGames.Infrastructure\obj\Debug\net6.0\SportGames.Infrastructure.csproj.CoreCompileInputs.cache
+C:\work\projects\SportGames\SportGames.Infrastructure\obj\Debug\net6.0\SportGames.Infrastructure.dll
+C:\work\projects\SportGames\SportGames.Infrastructure\obj\Debug\net6.0\refint\SportGames.Infrastructure.dll
+C:\work\projects\SportGames\SportGames.Infrastructure\obj\Debug\net6.0\SportGames.Infrastructure.pdb
+C:\work\projects\SportGames\SportGames.Infrastructure\obj\Debug\net6.0\ref\SportGames.Infrastructure.dll
