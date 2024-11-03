@@ -2,6 +2,11 @@
 
 namespace SportGames.Infrastructure;
 
+/*
+ * Used for demo and test purposes.
+ * In real application a DB-related implementation (e.g. based on Entity Framework) should be used.
+ */
+
 public class InMemoryGamesRepository : IGamesRepository
 {
     public readonly ConcurrentBag<Game> Games = new();
@@ -15,18 +20,5 @@ public class InMemoryGamesRepository : IGamesRepository
     public async Task<IEnumerable<Game>> GetGames()
     {
         return await Task.FromResult(Games);
-    }
-
-    public async Task<IEnumerable<Game>> FindGames(SearchGamesFilter filter)
-    {
-        var games = Games
-            .Where(x => x.SportType == filter.SportType
-                        && x.Competition == filter.Competition
-                        && x.DateTime >= filter.MinGameDateTimeToSearch)
-            .Where(x =>
-                x.Teams[0] == filter.Team1 && x.Teams[1] == filter.Team2 ||
-                x.Teams[0] == filter.Team2 && x.Teams[1] == filter.Team1);
-
-        return await Task.FromResult(games.ToList());
     }
 }

@@ -12,5 +12,8 @@ Below is a draft example of how the system could be designed to support horizont
 - `Api` - simple API project to expose Games information;
 - `Tests` - tests project with several unit-tests covering unique game identification rules.
 
+DB scheme can be designed as following:
+![db-scheme.png](./db-scheme.png)
+
 **P.S.** I haven't gone to much deep in details of implementation because it will take time to architect all the system. Just tried to collect needed projects and show some logic on unique Game identification (you can run Tests to validate it).
 Also, I didn't cover any part related to the DB structure, but it can be separately discussed if needed.

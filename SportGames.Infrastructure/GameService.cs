@@ -4,7 +4,7 @@ public class GameService
 {
     private readonly IGamesRepository _gamesRepository;
     private readonly TimeSpan _gameUniquenessTimeFrame = TimeSpan.FromHours(2);
-    private readonly TimeSpan _searchForGamesNotOlderThanDays = -TimeSpan.FromDays(1);
+    private readonly TimeSpan _searchForGamesNotOlderThanDays = TimeSpan.FromDays(1);
 
     public GameService(IGamesRepository gamesRepository)
     {
@@ -40,7 +40,7 @@ public class GameService
 
     private async ValueTask<bool> ShouldSave(Game game)
     {
-        var searchTimeLimitation = game.DateTime.Add(_searchForGamesNotOlderThanDays);
+        var searchTimeLimitation = game.DateTime.Add(-_searchForGamesNotOlderThanDays);
         var searchFilter = new SearchGamesFilter(game.SportType, game.Competition, game.Teams[0], game.Teams[1],
             searchTimeLimitation);
 
@@ -50,13 +50,4 @@ public class GameService
 
         return !hasSameGame;
     }
-}
-
-public record SearchGamesFilter(
-    SportType SportType,
-    string Competition,
-    string Team1,
-    string Team2,
-    DateTime? MinGameDateTimeToSearch = null)
-{
 }
