@@ -6,9 +6,9 @@ Below is a draft example of how the system could be designed to support horizont
 ![system-diagram.png](./system-diagram.png)
 
 #### The solution has the following projects
-- `SourcesAnalyzer` - can be background task/job to constantly analyze the source web apps and aggregate Games information into a distributed queue (e.g. Kafka or RabbitMQ);
-- `GamesProcessor` - also some kind of a background worker to process the data provided by `SourcesAnalyzer` via queue and put the results into the persistent storage (e.g. Database);
-- `Infrastructre` project - a library containing some examples of storage logic implementation;
+- `SourcesAnalyzer` - can be a background task/job that constantly analyze the source web apps and aggregate Games information into a distributed queue (e.g. Kafka or RabbitMQ);
+- `GamesProcessor` - also some kind of a background worker (job service) that processes the data provided by `SourcesAnalyzer` by reading the queue and put the results into the persistent storage (e.g. Database);
+- `Infrastructre` - a library containing business logic storage logic and storage implementation;
 - `Api` - simple API project to expose Games information;
 - `Tests` - tests project with several unit-tests covering unique game identification rules.
 
